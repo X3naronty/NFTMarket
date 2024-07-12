@@ -1,0 +1,301 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Плавный скролл
+   */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --text-color: #fff;
+  --text-color-gradient: linear-gradient(5deg, #2600fc 0%, #ff00ea 100%);
+  --text-color-alt: #b7b4bb;
+  --border-radius: 50px;
+  --button-background: linear-gradient(7deg, #2600fc 0%, #ff00ea 100%);
+  --button-height: 66px;
+  --button-height-narrow: 47px;
+  --input-height: 47px;
+  --background-color: #0f051d;
+  --font-family-base: "Inter", sans-serif;
+  --container-width: 1230px;
+  --container-padding-x: 20px;
+  --section-padding-y: 130px;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + 2 * var(--container-padding-x));
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-visible {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(16px, 1.0416666667vw, 20px);
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+a,
+button,
+input,
+textarea,
+svg {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+@media (max-width: 1080px) {
+  .header {
+    padding-top: 0;
+    --text-color: black;
+  }
+}
+@media (max-width: 1080px) {
+  .header__logo {
+    width: 100px;
+  }
+}
+.header__menu {
+  display: inline-block;
+}
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 34px;
+       column-gap: 34px;
+  height: 100%;
+}
+@media (max-width: 1080px) {
+  .header__menu-list {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+.header__menu-icon {
+  width: 25px;
+  aspect-ratio: 1;
+}
+@media (max-width: 1080px) {
+  .header__menu-icon {
+    width: 20px;
+  }
+}
+.header__menu-item {
+  font-weight: bold;
+}
+.header__menu--short-dist {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media (max-width: 1080px) {
+  .header__menu--short-dist {
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */

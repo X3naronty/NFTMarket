@@ -1,0 +1,1 @@
+{"version":3,"sources":["_utils.scss"],"names":[],"mappings":"AAAA,WACE,UAAW,8DACX,eAAgB,2BAChB,cAAe","file":"_utils.min.css","sourcesContent":[".container {\n    max-width: calc(var(--container-width + 2 * var(--container-padding-x)));\n    padding-inline: var(--container-padding-x);\n    margin-inline: auto;\n}\n\n.visually-hidden {\n    \n}"]}

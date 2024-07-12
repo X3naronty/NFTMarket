@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    justify-content: space-between;
+    padding-top: 10px;
+
+    @include tablet {
+        padding-top: 0;
+        --text-color: black;
+    }
+
+    &__logo {
+        @include tablet {
+            width: 100px;
+        }
+    }
+
+    &__menu {
+        display: inline-block;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 34px;
+            height: 100%;
+
+            @include tablet {
+                column-gap: 20px;
+            }
+        }
+
+        &-icon {
+            width: 25px;
+            aspect-ratio: 1;
+
+            @include tablet {
+                width: 20px;
+            }
+        }
+
+        &-item {
+            font-weight: bold;
+        }
+
+        &--short-dist {
+            column-gap: 20px;
+
+            @include tablet {
+                column-gap: 12px;
+            }
+        }
+    }
+
+    
+}

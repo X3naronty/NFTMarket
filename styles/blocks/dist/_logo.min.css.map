@@ -1,0 +1,1 @@
+{"version":3,"sources":["_logo.scss"],"names":[],"mappings":"AAAA,MACE,QAAS,KACT,YAAa","file":"_logo.min.css","sourcesContent":[".logo {\n    display: flex;\n    align-items: center;\n    &__image {\n        \n    }\n}"]}

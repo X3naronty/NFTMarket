@@ -1,0 +1,2 @@
+.header{display:flex;flex-direction:row;height:46px;justify-content:space-between;padding-top:27px}q .header__menu{display:inline-block}q .header__menu-list{display:flex;align-items:center;column-gap:34px;height:100%}q .header__menu-item{font-weight:700}q .header__menu_short-dist{column-gap:20px}
+/*# sourceMappingURL=_header.min.css.map */

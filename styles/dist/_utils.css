@@ -1,0 +1,7 @@
+.container {
+  max-width: calc(var(--container-width + 2 * var(--container-padding-x)));
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+/*# sourceMappingURL=_utils.css.map */

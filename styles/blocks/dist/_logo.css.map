@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_logo.scss"],"sourcesContent":[".logo {\n    display: flex;\n    align-items: center;\n    &__image {\n        \n    }\n}"],"file":"_logo.css"}
