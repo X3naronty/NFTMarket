@@ -201,7 +201,7 @@ svg * {
   overflow: hidden !important;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 780px) {
   .mobile-hidden {
     display: none !important;
   }

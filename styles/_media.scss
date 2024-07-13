@@ -41,7 +41,7 @@ $mobile-s: 480px;
 }
 
 @mixin mobile {
-    @media (max-width: $tablet){
+    @media (max-width: $mobile){
         @content;
     }
 }
