@@ -1,0 +1,1 @@
+{"version":3,"sources":["_button.scss"],"names":[],"mappings":"AAAA,QACE,iBAAkB,yBAClB,cAAe,qBACf,QAAS,KAAK,KACd,YACA,OAAQ,KACR,YAAa","file":"_button.min.css","sourcesContent":[".button {\n    background-image: var(--button-background);\n    border-radius: var(--border-radius);\n    padding: 20px 40px;\n    border: none;\n    height: 66px;\n    font-weight: 700;\n    \n}"]}

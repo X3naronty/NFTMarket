@@ -5,10 +5,8 @@
         flex-direction: row;
         height: 90px;
         justify-content: space-between;
-        padding-top: 10px;
 
         @include tablet {
-            padding-top: 0;
             --text-color: black;
         }
     }

@@ -1,0 +1,18 @@
+.pagination {
+  text-align: center;
+}
+.pagination__list {
+  display: inline-flex;
+  margin-inline: auto;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
+}
+.pagination__button {
+  width: 10px;
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.pagination__button--inactive {
+  opacity: 50%;
+}/*# sourceMappingURL=pagination.css.map */

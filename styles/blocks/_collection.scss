@@ -1,0 +1,31 @@
+.collection {
+    text-align: center;    
+
+    &__slider{
+        position: relative;
+        margin-bottom: 67px;
+
+        &-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        
+        &-button {
+            width: 40px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #b7b4bb;
+            vertical-align: baseline;
+            position: absolute;
+            top: 40%;
+            right: -20px;
+
+            &--inactive {
+                opacity: 50%;
+            }
+        }
+    }
+}

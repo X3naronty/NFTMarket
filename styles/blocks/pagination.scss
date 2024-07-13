@@ -1,0 +1,21 @@
+.pagination {
+    text-align: center;
+
+    &__list {
+        display: inline-flex;
+        margin-inline: auto;
+        column-gap: 22px;
+    }
+
+    &__button {
+        width: 10px;
+        aspect-ratio: 1;
+
+        background-color: #fff;
+        border-radius: 50%;
+
+        &--inactive {
+            opacity: 50%;
+        }
+    }
+}

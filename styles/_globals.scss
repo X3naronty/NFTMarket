@@ -1,15 +1,37 @@
 body {
     @include fluid-text();
 
+    color: var(--text-color);
+
     font-family: var(--font-family-base);
     font-weight: normal;
 
-    color: var(--text-color);
     background-color: var(--background-color);
+
+    line-height: var(--line-height);
+}
+
+button {
+  border: none;
+}
+
+p {
+  color: var(--text-color-alt);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
+    line-height: var(--line-height-small);
+}
+
+h1, .h1 {
+  @include fluid-text(42, 72);
+}
+h2, .h2 {
+  @include fluid-text(42, 64);
+}
+h3, .h3 {
+  @include fluid-text(28, 32);
 }
 
 a,

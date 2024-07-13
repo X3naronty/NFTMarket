@@ -6,7 +6,7 @@
 
     --border-radius: 50px;
 
-    --button-background: linear-gradient(7deg, #2600fc 0%, #ff00ea 100%);
+    --button-background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
     --button-height: 66px; 
     --button-height-narrow: 47px;
     --input-height: 47px;
@@ -21,4 +21,7 @@
     --section-padding-y: 130px;
 
     --transition-duration: 0.2s;
+
+    --line-height: 164%;
+    --line-height-small: 110%; 
 }

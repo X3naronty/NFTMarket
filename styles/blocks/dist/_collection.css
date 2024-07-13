@@ -1,0 +1,33 @@
+.collection {
+  text-align: center;
+}
+
+.collection__slider {
+  position: relative;
+  margin-bottom: 67px;
+}
+
+.collection__slider-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.collection__slider-button {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #b7b4bb;
+  vertical-align: baseline;
+  position: absolute;
+  top: 40%;
+  right: -20px;
+}
+
+.collection__slider-button--inactive {
+  opacity: 50%;
+}
+
+/*# sourceMappingURL=_collection.css.map */

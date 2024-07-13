@@ -1,0 +1,10 @@
+.button {
+  background-image: var(--button-background);
+  border-radius: var(--border-radius);
+  padding: 20px 40px;
+  border: none;
+  height: 66px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=_button.css.map */

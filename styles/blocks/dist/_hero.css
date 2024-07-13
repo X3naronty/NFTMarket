@@ -1,0 +1,59 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__body {
+  width: 50%;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+}
+
+.hero__description {
+  margin-bottom: 35px;
+}
+
+.hero__button {
+  position: relative;
+  margin-bottom: 60px;
+  padding-right: 55px !important;
+}
+
+.hero__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 35px;
+  top: 27px;
+  background-image: url("../../img/top-right-arrow.svg");
+  width: 16px;
+  aspect-ratio: 1;
+}
+
+.hero__members {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 70px;
+  justify-content: center;
+}
+
+.hero__members-title {
+  width: 77%;
+}
+
+.hero__image {
+  width: 50%;
+}
+
+.hero__partners-list {
+  display: flex;
+  column-gap: 64px;
+}
+
+/*# sourceMappingURL=_hero.css.map */

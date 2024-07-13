@@ -3,7 +3,7 @@
   --text-color-gradient: linear-gradient(5deg, #2600fc 0%, #ff00ea 100%);
   --text-color-alt: #b7b4bb;
   --border-radius: 50px;
-  --button-background: linear-gradient(7deg, #2600fc 0%, #ff00ea 100%);
+  --button-background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
   --button-height: 66px;
   --button-height-narrow: 47px;
   --input-height: 47px;
@@ -13,6 +13,8 @@
   --container-padding-x: 20px;
   --section-padding-y: 130px;
   --transition-duration: 0.2s;
+  --line-height: 164%;
+  --line-height-small: 110%;
 }
 
 /*# sourceMappingURL=_variables.css.map */

@@ -1,0 +1,52 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    &__body {
+        width: 50%;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    &__description {
+        margin-bottom: 35px;
+        width: 80%;
+        @include fluid-text(16, 22);
+    }
+
+    &__button {
+        position: relative;
+        margin-bottom: 60px;
+       // padding-right: 55px !important;
+    }
+
+    &__members {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 70px;
+        justify-content: center;
+
+        &-title {
+            width: 70%;
+        }
+    }
+
+    &__image {
+        width: 50%;
+    }
+
+    &__partners {
+        margin-inline: auto;
+        margin-top: 220px;
+        &-list {
+            display: flex;
+            column-gap: 64px;
+        }
+    }
+}

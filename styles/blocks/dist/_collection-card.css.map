@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_collection-card.scss"],"sourcesContent":[".collection-card {\n\n    &__image {\n        margin-bottom: 22px;\n    }\n\n    &__title {\n        margin-bottom: 12px;\n        text-align: center;\n    }\n\n    &__description {\n        text-align: center;\n        \n    }\n}"],"file":"_collection-card.css"}

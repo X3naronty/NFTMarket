@@ -169,7 +169,7 @@ svg * {
   --text-color-gradient: linear-gradient(5deg, #2600fc 0%, #ff00ea 100%);
   --text-color-alt: #b7b4bb;
   --border-radius: 50px;
-  --button-background: linear-gradient(7deg, #2600fc 0%, #ff00ea 100%);
+  --button-background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
   --button-height: 66px;
   --button-height-narrow: 47px;
   --input-height: 47px;
@@ -179,6 +179,8 @@ svg * {
   --container-padding-x: 20px;
   --section-padding-y: 130px;
   --transition-duration: 0.2s;
+  --line-height: 164%;
+  --line-height-small: 110%;
 }
 
 .container {
@@ -215,14 +217,36 @@ svg * {
 
 body {
   font-size: clamp(16px, 1.0416666667vw, 20px);
+  color: var(--text-color);
   font-family: var(--font-family-base);
   font-weight: normal;
-  color: var(--text-color);
   background-color: var(--background-color);
+  line-height: var(--line-height);
+}
+
+button {
+  border: none;
+}
+
+p {
+  color: var(--text-color-alt);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  line-height: var(--line-height-small);
+}
+
+h1, .h1 {
+  font-size: clamp(42px, 3.75vw, 72px);
+}
+
+h2, .h2 {
+  font-size: clamp(42px, 3.3333333333vw, 64px);
+}
+
+h3, .h3 {
+  font-size: clamp(28px, 1.6666666667vw, 32px);
 }
 
 a,
@@ -243,11 +267,9 @@ a {
   flex-direction: row;
   height: 90px;
   justify-content: space-between;
-  padding-top: 10px;
 }
 @media (max-width: 1080px) {
   .header__inner {
-    padding-top: 0;
     --text-color: black;
   }
 }
@@ -298,4 +320,143 @@ a {
 .logo {
   display: flex;
   align-items: center;
+}
+.section {
+  padding-block: var(--section-padding-y);
+}
+.section__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section__title span {
+  background: linear-gradient(40deg, rgb(123, 0, 245) 0%, rgb(255, 0, 234) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__body {
+  width: 50%;
+}
+.hero__title {
+  margin-bottom: 20px;
+  width: 90%;
+}
+.hero__description {
+  margin-bottom: 35px;
+  width: 80%;
+  font-size: clamp(16px, 1.1458333333vw, 22px);
+}
+.hero__button {
+  position: relative;
+  margin-bottom: 60px;
+}
+.hero__members {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 70px;
+  justify-content: center;
+}
+.hero__members-title {
+  width: 70%;
+}
+.hero__image {
+  width: 50%;
+}
+.hero__partners {
+  margin-inline: auto;
+  margin-top: 220px;
+}
+.hero__partners-list {
+  display: flex;
+  -moz-column-gap: 64px;
+       column-gap: 64px;
+}
+
+.button {
+  background-image: var(--button-background);
+  border-radius: var(--border-radius);
+  padding: 20px 40px;
+  height: 66px;
+  font-weight: 700;
+  font-size: clamp(16px, 0.8854166667vw, 17px);
+  color: white;
+}
+
+hr {
+  border: none;
+  margin: 0;
+}
+hr::after {
+  background: url("../../img/hr.svg") no-repeat top center;
+  display: block;
+  height: 20px;
+  content: "";
+}
+
+.collection {
+  text-align: center;
+}
+.collection__slider {
+  position: relative;
+  margin-bottom: 67px;
+}
+.collection__slider-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.collection__slider-button {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #b7b4bb;
+  vertical-align: baseline;
+  position: absolute;
+  top: 40%;
+  right: -20px;
+}
+.collection__slider-button--inactive {
+  opacity: 50%;
+}
+
+.collection-card__image {
+  margin-bottom: 22px;
+}
+.collection-card__title {
+  margin-bottom: 3px;
+  text-align: center;
+}
+.collection-card__description {
+  text-align: center;
+  font-size: clamp(17px, 0.8333333333vw, 16px);
+}
+
+.pagination {
+  text-align: center;
+}
+.pagination__list {
+  display: inline-flex;
+  margin-inline: auto;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
+}
+.pagination__button {
+  width: 10px;
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.pagination__button--inactive {
+  opacity: 50%;
 }/*# sourceMappingURL=styles.css.map */
