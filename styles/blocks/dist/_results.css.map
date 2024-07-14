@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_results.scss"],"sourcesContent":[".report {\n\n    &__list {\n        display: flex;\n    }\n\n    &__item {\n\n    }\n}"],"file":"_results.css"}

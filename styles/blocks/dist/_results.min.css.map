@@ -1,0 +1,1 @@
+{"version":3,"sources":["_results.scss"],"names":[],"mappings":"AAAA,cACE,QAAS","file":"_results.min.css","sourcesContent":[".report {\n\n    &__list {\n        display: flex;\n    }\n\n    &__item {\n\n    }\n}"]}

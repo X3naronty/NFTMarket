@@ -26,14 +26,23 @@
     }
 
     &__members {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 70px;
-        justify-content: center;
+        display: grid;
+        //grid-template-rows: 1fr 1fr;
+        grid-template-columns: 120px 1fr;
+        height: 53px;
+        
+        &-icon {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
 
         &-title {
-            width: 70%;
+            @include fluid-text(30, 32);
+        }
+
+        &-description {
+            margin-top: -5px;
+            @include fluid-text(16, 17);
         }
     }
 

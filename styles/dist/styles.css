@@ -163,7 +163,7 @@ svg * {
   --text-color-gradient: linear-gradient(5deg, #2600fc 0%, #ff00ea 100%);
   --text-color-alt: #b7b4bb;
   --border-radius: 50px;
-  --button-background: linear-gradient(7deg, #2600fc 0%, #ff00ea 100%);
+  --button-background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
   --button-height: 66px;
   --button-height-narrow: 47px;
   --input-height: 47px;
@@ -239,7 +239,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: clamp(28px, 1.6666666667vw, 32px);
+  font-size: clamp(28px, 2.9166666667vw, 56px);
+}
+
+h4, .h4 {
+  font-size: clamp(26px, 1.4583333333vw, 28px);
 }
 
 a,
@@ -366,15 +370,23 @@ a {
 }
 
 .hero__members {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 70px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  height: 53px;
+}
+
+.hero__members-icon {
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .hero__members-title {
-  width: 70%;
+  font-size: clamp(30px, 1.6666666667vw, 32px);
+}
+
+.hero__members-description {
+  margin-top: -5px;
+  font-size: clamp(16px, 0.8854166667vw, 17px);
 }
 
 .hero__image {
@@ -407,20 +419,26 @@ hr {
 }
 
 hr::after {
-  background: url("../../img/hr.svg") no-repeat top center;
+  background: url("../img/hr.svg") no-repeat top center;
   display: block;
   height: 20px;
   content: '';
 }
 
+.collection {
+  text-align: center;
+}
+
 .collection__slider {
   position: relative;
+  margin-bottom: 67px;
 }
 
 .collection__slider-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .collection__slider-button {
@@ -451,6 +469,61 @@ hr::after {
 .collection-card__description {
   text-align: center;
   font-size: clamp(17px, 0.8333333333vw, 16px);
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination__list {
+  display: inline-flex;
+  margin-inline: auto;
+  column-gap: 22px;
+}
+
+.pagination__button {
+  width: 10px;
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.pagination__button--inactive {
+  opacity: 50%;
+}
+
+.choose-us__list {
+  display: flex;
+  justify-content: space-between;
+  height: 426px;
+}
+
+.choose-us__item {
+  height: 377px;
+}
+
+.choose-us__item:nth-child(4n + 1), .choose-us__item:nth-child(4n) {
+  height: 350px;
+}
+
+.choose-us__item:nth-child(2n) {
+  margin-top: auto;
+}
+
+.choose-us__card {
+  border: 1px solid rgba(232, 232, 232, 0.25);
+  border-radius: 24px;
+  padding: 48px 33px;
+  height: 100%;
+  width: 277px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.choose-us__card-description {
+  font-size: clamp(16px, 0.8854166667vw, 17px);
+  line-height: 158%;
 }
 
 /*# sourceMappingURL=styles.css.map */

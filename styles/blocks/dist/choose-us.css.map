@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["choose-us.scss"],"sourcesContent":[".choose-us {\n\n    &__list {\n        display: flex;\n    }\n}"],"file":"choose-us.css"}

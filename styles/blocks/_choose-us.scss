@@ -1,0 +1,38 @@
+.choose-us {
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        height: 426px;
+    }
+
+    &__item {
+        &:nth-child(4n + 1), &:nth-child(4n) {
+            height: 350px;
+        }
+        &:nth-child(2n) {
+            margin-top: auto;
+        }
+        height: 377px;
+    }
+
+    &__card {
+
+        border: 1px solid rgba(232, 232, 232, 0.25);
+        border-radius: 24px;
+        padding: 48px 33px;
+        height: 100%;
+        width: 277px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-description {
+            @include fluid-text(16, 17);
+            line-height: 158%;
+        }
+
+        
+    }
+}

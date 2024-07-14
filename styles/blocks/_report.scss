@@ -1,0 +1,24 @@
+.report {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        width: 307.5px;
+        padding-bottom: 30px;
+        text-align: center;
+
+        &:not(:first-child) .report__card {
+            border-left: 1px #fff solid;
+        }
+    }
+
+    &__card {
+        padding-inline: 15px;
+    }
+
+    &__title {
+        margin-bottom: 22px;
+    }
+}

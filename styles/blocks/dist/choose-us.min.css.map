@@ -1,0 +1,1 @@
+{"version":3,"sources":["choose-us.scss"],"names":[],"mappings":"AAAA,iBACE,QAAS","file":"choose-us.min.css","sourcesContent":[".choose-us {\n\n    &__list {\n        display: flex;\n    }\n}"]}
