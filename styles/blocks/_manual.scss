@@ -1,0 +1,62 @@
+.manual {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 120px;
+
+        list-style: none;
+        counter-reset: counter-manual;
+    }
+
+    &__item {
+        --manualNumber: counter(counter-manual) ".";
+        --flexDirection: row;
+
+        counter-increment: counter-manual;
+
+        &:nth-child(-n + 9) {
+            --manualNumber: "0" counter(counter-manual) ".";
+        }
+
+        &:nth-child(2n + 1) {
+            --flexDirection: row-reverse;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: var(--flexDirection);
+        column-gap: 120px;
+
+        &-num p::before {
+            content: var(--manualNumber);
+            @include fluid-text(19, 21);
+            background: linear-gradient(40deg, rgba(123,0,245,1) 0%, rgba(255,0,234,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        &-num {
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            margin-bottom: 25px;
+        }
+
+        &-description {
+            margin-bottom: 30px;
+        }
+
+        &-link {
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: rgba(131, 131, 131, 0.25) 1px solid;
+            line-height: 1;
+        }
+    }
+
+}

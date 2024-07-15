@@ -1,0 +1,9 @@
+.title {
+
+    & span {
+        background: linear-gradient(40deg, rgba(123,0,245,1) 0%, rgba(255,0,234,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

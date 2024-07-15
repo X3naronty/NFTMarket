@@ -1,0 +1,32 @@
+.subscribe {
+    padding: 60px 57px;
+    border: 1px solid rgba(243, 243, 243, 0.25);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        margin-bottom: 18px;
+    }
+
+    &__description {
+        margin-bottom: 36px;
+    }
+
+    &__input {
+        height: var(--input-height);
+        background: rgba(246, 242, 242, 0.19);
+        border-radius: var(--border-radius);
+        border: none;
+        padding: 14px 25px;
+        @include fluid-text(16, 17);
+        margin-right: 10px;
+    }
+
+    &__button {
+        height: var(--button-height-narrow);
+        padding: 0px 24px;
+        height: var(--input-height)
+    }
+}

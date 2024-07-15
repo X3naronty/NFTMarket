@@ -1,0 +1,21 @@
+.manual__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  counter-reset: counter-manual;
+}
+
+.manual__item {
+  --manualNumber: counter(counter-manual) ".";
+  counter-increment: counter-manual;
+}
+
+.manual__item:nth-child(-n + 9) {
+  --manualNumber: "0" counter(counter-manual) ".";
+}
+
+.manual__card-num p::before {
+  content: var(--manualNumber);
+}
+
+/*# sourceMappingURL=_manual.css.map */

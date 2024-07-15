@@ -1,0 +1,2 @@
+.roadmap__list{display:grid;list-style:none;counter-reset:roadmap-counter}.roadmap__item{counter-increment:roadmap-counter;--cardNumber:"PHASE" counter(roadmap-counter)}.roadmap__item:nth-child(-n+9){--cardNumber:"PHASE 0" counter(roadmap-counter)}
+/*# sourceMappingURL=_roadmap.min.css.map */

@@ -1,0 +1,18 @@
+.roadmap {
+
+    &__list {
+        display: grid;
+
+        list-style: none;
+        counter-reset: roadmap-counter;
+    }
+
+    &__item {
+        counter-increment: roadmap-counter;
+        --cardNumber: "PHASE" counter(roadmap-counter);
+    }
+
+    &__item:nth-child(-n + 9) {
+        --cardNumber: "PHASE 0" counter(roadmap-counter);
+    }
+}

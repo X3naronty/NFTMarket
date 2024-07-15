@@ -1,0 +1,15 @@
+.subscribe__input {
+  height: var(--input-height);
+  background: rgba(246, 242, 242, 0.19);
+  border-radius: var(--border-radius);
+  border: none;
+  padding: 14px 25px;
+}
+
+.subscribe__button {
+  height: var(--button-height-narrow);
+  padding: 0px 24px;
+  height: var(--input-height);
+}
+
+/*# sourceMappingURL=_subscribe.css.map */

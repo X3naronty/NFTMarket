@@ -1,0 +1,54 @@
+.roadmap-card {
+    width: 368px;
+    height: 460px;
+    border: 1px solid rgba(253, 253, 253, 0.34);
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 32px;
+
+    &__number {
+        & p::before {
+            content: var(--cardNumber);
+            font-weight: 700;
+            background: linear-gradient(40deg, rgba(123,0,245,1) 0%, rgba(255,0,234,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        margin-bottom: 28px;
+    }
+    
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 80px;
+            border-top: 1px solid #fdfdfd;
+            margin-block: 35px;
+        }
+    }
+
+    &__list {
+        list-style: inside;
+        list-style-image: url('../img/roadmap/vector.svg');
+        
+    }
+
+    &__item {
+        vertical-align: bottom  ;
+        &::marker {
+            width: 16px;
+            height: 16px;            
+        }
+    }
+
+}
