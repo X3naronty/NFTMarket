@@ -327,11 +327,20 @@ a {
 
 .section {
   padding-block: var(--section-padding-y);
+  height: auto;
 }
 
 .section__title {
   text-align: center;
   margin-bottom: 80px;
+}
+
+.section_bg {
+  background: url("./../img/minting.png") center repeat;
+  box-shadow: inset 0px 0px 35px 24px rgba(15, 5, 29, 0.79);
+  padding-inline: 0;
+  margin-top: 42px;
+  border-bottom: 1px solid rgba(183, 180, 187, 0.25);
 }
 
 .hero {
@@ -404,6 +413,7 @@ a {
   font-weight: 700;
   font-size: clamp(16px, 0.8854166667vw, 17px);
   color: white;
+  line-height: 120%;
 }
 
 hr {
@@ -636,6 +646,198 @@ hr::after {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.roadmap__list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 50px;
+  justify-content: space-between;
+  height: auto;
+  list-style: none;
+  counter-reset: roadmap-counter;
+}
+
+.roadmap__item {
+  counter-increment: roadmap-counter;
+  --cardNumber: "PHASE" counter(roadmap-counter);
+}
+
+.roadmap__item:nth-child(-n + 9) {
+  --cardNumber: "PHASE 0" counter(roadmap-counter);
+}
+
+.roadmap-card {
+  width: 368px;
+  height: auto;
+  border: 1px solid rgba(253, 253, 253, 0.34);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+}
+
+@media (max-width: 1080px) {
+  .roadmap-card {
+    padding: 32px 26px;
+  }
+}
+
+.roadmap-card__number {
+  margin-bottom: 28px;
+}
+
+.roadmap-card__number p::before {
+  content: var(--cardNumber);
+  font-weight: 700;
+  background: linear-gradient(40deg, #7b00f5 0%, #ff00ea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-card__title {
+  margin-bottom: 25px;
+}
+
+.roadmap-card__description::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 80px;
+  border-top: 1px solid #fdfdfd;
+  margin-block: 35px;
+}
+
+.roadmap-card__list {
+  list-style: inside;
+  list-style-image: url("../img/roadmap/vector.svg");
+}
+
+.roadmap-card__item {
+  vertical-align: bottom;
+}
+
+.roadmap-card__item::marker {
+  width: 16px;
+  height: 16px;
+}
+
+.artists__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.artists__item:nth-child(2n - 1) {
+  margin-top: 30px;
+}
+
+.artist__image {
+  margin-bottom: 24px;
+}
+
+.artist__title {
+  font-size: clamp(22px, 1.25vw, 24px);
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.artist__description {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.artist__socials-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.questions__list {
+  width: 688px;
+  padding: 50px;
+  margin-inline: auto;
+  border-radius: 24px;
+  border: 1px solid var(--text-color-alt);
+}
+
+.questions__item {
+  padding-block: 20px;
+  user-select: none;
+}
+
+.questions__item:last-child {
+  padding-bottom: 0;
+}
+
+.questions__item:first-child {
+  padding-top: 0;
+}
+
+.questions__item:not(:first-child) {
+  border-top: 1px solid var(--text-color-alt);
+}
+
+.questions__accordeon {
+  position: relative;
+  --indicatorDisplay: none;
+}
+
+.questions__accordeon-indicator::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("./../img/questions/Vector.svg");
+  width: 18px;
+  height: 15px;
+  right: 0;
+  bottom: 10px;
+}
+
+.questions__accordeon-indicator::before {
+  content: "";
+  position: absolute;
+  display: var(--indicatorDisplay);
+  background-image: url("./../img/questions/Vector (1).svg");
+  width: 14px;
+  height: 8px;
+  right: 0;
+  top: 10px;
+}
+
+.questions__accordeon[open] {
+  --indicatorDisplay: block;
+}
+
+.questions__accordeon-title {
+  font-size: clamp(18px, 1.25vw, 24px);
+}
+
+.questions__accordeon-summary {
+  list-style: none;
+}
+
+.questions__accordeon-body {
+  padding-top: 20px;
+}
+
+.minting {
+  opacity: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.minting__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.minting__description {
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */

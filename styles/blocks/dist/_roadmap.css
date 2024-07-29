@@ -1,5 +1,9 @@
 .roadmap__list {
   display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 50px;
+  justify-content: space-between;
+  height: auto;
   list-style: none;
   counter-reset: roadmap-counter;
 }

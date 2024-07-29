@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_artist.scss"],"sourcesContent":[".artist {\n\n    &__title {\n        \n    }\n}"],"file":"_artist.css"}

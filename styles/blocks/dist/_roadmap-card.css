@@ -5,11 +5,8 @@
   border-radius: 32px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 40px 32px;
-}
-
-.roadmap-card__number {
-  margin-bottom: 28px;
 }
 
 .roadmap-card__number p::before {
@@ -21,8 +18,10 @@
   -webkit-text-fill-color: transparent;
 }
 
-.roadmap-card__title {
-  margin-bottom: 25px;
+.roadmap-card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .roadmap-card__description::after {
@@ -31,7 +30,6 @@
   height: 1px;
   width: 80px;
   border-top: 1px solid #fdfdfd;
-  margin-block: 35px;
 }
 
 .roadmap-card__list {

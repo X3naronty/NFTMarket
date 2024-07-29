@@ -1,0 +1,24 @@
+.artist {
+
+    &__image {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        @include fluid-text(22, 24);
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    &__socials-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 15px;
+    }
+}

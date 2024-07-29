@@ -1,2 +1,2 @@
-.section{padding-block:var(--section-padding-y)}.section__title{text-align:center;margin-bottom:80px}
+.section{padding-block:var(--section-padding-y);height:auto}.section__title{text-align:center;margin-bottom:80px}.section_bg{background:url(../img/minting.png) center;box-shadow:inset 0 0 35px 24px rgba(15,5,29,.79);padding-inline:0;margin-top:42px;border-bottom:1px solid rgba(183,180,187,.25)}
 /*# sourceMappingURL=_section.min.css.map */

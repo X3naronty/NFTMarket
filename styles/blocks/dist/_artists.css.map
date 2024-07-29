@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_artists.scss"],"sourcesContent":[".artists {\n    \n    &__list {\n        display: flex;\n        flex-direction: row;\n        justify-content: space-around;\n    }\n    \n    &__item:nth-child(2n - 1) {\n        margin-top: 30px;\n    }\n}"],"file":"_artists.css"}
