@@ -6,7 +6,7 @@
         margin-inline: auto;
 
         border-radius: 24px;
-        border: 1px solid var(--text-color-alt);
+        border: 1px solid rgba(183, 180, 187, 0.25);
     }
 
     &__item {
@@ -23,7 +23,7 @@
         }
 
         &:not(:first-child) {
-            border-top: 1px solid var(--text-color-alt);
+            border-top: 1px solid rgba(183, 180, 187, 0.25);
         }
     }
 

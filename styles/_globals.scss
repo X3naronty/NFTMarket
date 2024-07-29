@@ -9,6 +9,7 @@ body {
     background-color: var(--background-color);
 
     line-height: var(--line-height);
+    
 }
 
 button {
@@ -35,11 +36,11 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  @include fluid-text(26, 28)
+  @include fluid-text(26, 28);
 }
 
 h5, .h5 {
-  @include fuild-text(22, 24);
+  @include fluid-text(22, 24);
 }
 
 a,
@@ -53,4 +54,8 @@ svg {
 a {
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
