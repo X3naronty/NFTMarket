@@ -1,0 +1,1 @@
+{"version":3,"sources":["_decoration-background.scss"],"names":[],"mappings":"AAAA,uBACE,QAAS,KACT,SAAU,SACV,QAAS,GACT,UAAW","file":"_decoration-background.min.css","sourcesContent":[".decoration-background {\n    display: none;\n    position: absolute;\n    z-index: -1;\n    min-width: 1920px;\n    \n}"]}

@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_decoration-background.scss"],"sourcesContent":[".decoration-background {\n    display: none;\n    position: absolute;\n    z-index: -1;\n    min-width: 1920px;\n    \n}"],"file":"_decoration-background.css"}

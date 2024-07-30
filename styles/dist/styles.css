@@ -168,6 +168,7 @@ svg * {
   --button-height-narrow: 47px;
   --input-height: 47px;
   --background-color: #0f051d;
+  --background-image: './../img/hero/background.img';
   --font-family-base: 'Inter', sans-serif;
   --container-width: 1230px;
   --container-padding-x: 20px;
@@ -261,6 +262,10 @@ svg {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 .header__inner {
@@ -418,6 +423,10 @@ a {
   font-size: clamp(16px, 0.8854166667vw, 17px);
   color: white;
   line-height: 120%;
+}
+
+.button:hover {
+  opacity: 0.5;
 }
 
 hr {
@@ -906,6 +915,7 @@ hr::after {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-block: 35px;
 }
 
 .footer__logo {
@@ -914,7 +924,25 @@ hr::after {
 
 .theme-button {
   color: white;
-  opacity: 0.05;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 20px;
+  top: 95vh;
+}
+
+.theme-button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.theme-button:active {
+  --text-color: black !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

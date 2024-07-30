@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
-<body>
+<body class="body">
+    <img src="./img/hero/background.png" alt="" class="decoration-background">
     <header class="header">
         <header class="header__inner container">
             <h1 class="visually-hidden">
@@ -1067,17 +1068,26 @@
     //Get the style properties for the root
     const style = getComputedStyle(root);
 
-    //Get the style value for the root
-    let primaryColor = style.getPropertyValue("--text-color");
-
-    //Checking if we have access to the CSS variable
-    console.log(primaryColor);
-
     let themeButton = document.querySelector('.theme-button');
+    let decoration = document.querySelector('.decoration-background');
+
+
+
     themeButton.onclick = (e) =>  {
-        console.log('1');
-        root.style.setProperty('--text-color', "#000");
-        root.style.setProperty('--background-color', "#fff");
+        let value = style.getPropertyValue('--text-color');
+        //alert(value);
+        if (value === '#fff') { // light mode (default)
+            root.style.setProperty('--text-color', '#000');
+            root.style.setProperty('--background-color', '#fff');
+
+            decoration.style.setProperty('display', 'block');
+        } 
+        else 
+        {    // dark mode
+            root.style.setProperty('--text-color', '#fff');
+            root.style.setProperty('--background-color', '#0f051d');
+
+        }
     };
     </script>
 </body>
