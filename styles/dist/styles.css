@@ -945,4 +945,16 @@ hr::after {
   --text-color: black !important;
 }
 
+.decoration-background {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  min-width: 1920px;
+}
+
+.mobile-overlay__decoration-bar {
+  height: 4px;
+  background-image: var(--color-gradient);
+}
+
 /*# sourceMappingURL=styles.css.map */

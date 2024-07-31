@@ -3,6 +3,7 @@
   --text-color-gradient: linear-gradient(5deg, #2600fc 0%, #ff00ea 100%);
   --text-color-alt: #b7b4bb;
   --border-radius: 50px;
+  --border-color-gray: rgba(255, 255, 255, 0.25);
   --button-background: linear-gradient(25deg, #2600fc 0%, #ff00ea 100%);
   --button-height: 66px;
   --button-height-narrow: 47px;

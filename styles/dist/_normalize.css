@@ -111,6 +111,14 @@ body {
   line-height: 1.5;
 }
 
+dialog {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: inherit;
+  max-height: inherit;
+}
+
 /**
    Приводим к единому цвету svg-элементы
   */

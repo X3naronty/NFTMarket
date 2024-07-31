@@ -1,17 +1,29 @@
 .header {
 
+
+    &__burger-button {
+        background-color: transparent;
+        
+        & svg *[fill] {
+            fill: revert-layer;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
     &__inner {
         display: flex;
         flex-direction: row;
         height: 90px;
         justify-content: space-between;
-
-        @include tablet {
-            --text-color: black;
-        }
     }
 
     &__logo {
+        & svg *[fill] {
+            fill: var(--text-color);
+        }
         @include tablet {
             width: 100px;
         }
@@ -31,9 +43,13 @@
             }
         }
 
-        &-icon {
+        &-link {
             width: 25px;
             aspect-ratio: 1;
+
+            & svg {
+                width: 24px;
+            }
 
             @include tablet {
                 width: 20px;
@@ -42,6 +58,7 @@
 
         &-item {
             font-weight: bold;
+            
         }
 
         &--short-dist {
