@@ -4,6 +4,9 @@ $desktop: 1280px;
 $tablet-above: 1081px;
 $tablet: 1080px;
 
+$tablet-s-above: 921px;
+$tablet-s: 920px;
+
 $mobile-above: 781px;
 $mobile: 780px;
 
@@ -30,6 +33,18 @@ $mobile-s: 480px;
 
 @mixin tablet {
     @media (max-width: $tablet){
+        @content;
+    }
+}
+
+@mixin tablet-s-above {
+    @media (min-width: $tablet-s-above) {
+        @content;
+    }
+}
+
+@mixin tablet-s {
+    @media (max-width: $tablet-s) {
         @content;
     }
 }
@@ -69,5 +84,11 @@ $mobile-s: 480px;
         &:active {
             @content;
         }
+    }
+}
+
+@mixin print {
+    @media print {
+        @content;
     }
 }

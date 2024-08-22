@@ -1,74 +1,89 @@
 .header {
+  &__burger-button {
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
 
-
-    &__burger-button {
-        background-color: transparent;
-        
-        & svg *[fill] {
-            fill: revert-layer;
-        }
-
-        &:hover {
-            opacity: 0.5;
-        }
+    & svg *[fill] {
+      fill: revert-layer;
     }
 
-    &__inner {
-        display: flex;
-        flex-direction: row;
-        height: 90px;
-        justify-content: space-between;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    justify-content: space-between;
+  }
+
+  &__list-burger-wrapper {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__logo {
+    @include tablet {
+      width: 120px;
     }
 
-    &__logo {
-        & svg *[fill] {
-            fill: var(--text-color);
-        }
+    @include tablet-s {
+      width: 145px;
+    }
+  }
+
+  &__menu {
+    --headerMenuPaddingInline: 16px;
+
+    display: inline-flex;
+    align-items: center;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+
+      @include tablet {
+        --headerMenuPaddingInline: 12px;
+        font-size: 17px;
+      }
+
+      &--short-dist {
+        --headerMenuPaddingInline: 10px;
+
         @include tablet {
-            width: 100px;
+          --headerMenuPaddingInline: 8px;
         }
+      }
     }
 
-    &__menu {
-        display: inline-block;
+    &-link {
+      padding-inline: var(--headerMenuPaddingInline);
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
 
-        &-list {
-            display: flex;
-            align-items: center;
-            column-gap: 34px;
-            height: 100%;
+      & .svg-wrapper {
+        display: flex;
+        width: 24px;
 
-            @include tablet {
-                column-gap: 20px;
-            }
+        @include tablet {
+          width: 22px;
         }
 
-        &-link {
-            width: 25px;
-            aspect-ratio: 1;
-
-            & svg {
-                width: 24px;
-            }
-
-            @include tablet {
-                width: 20px;
-            }
+        @include tablet-s {
+          width: 24px;
         }
-
-        &-item {
-            font-weight: bold;
-            
-        }
-
-        &--short-dist {
-            column-gap: 20px;
-
-            @include tablet {
-                column-gap: 12px;
-            }
-        }
+      }
     }
 
-    
+    &-item {
+      font-weight: bold;
+      height: 100%;
+    }
+  }
 }

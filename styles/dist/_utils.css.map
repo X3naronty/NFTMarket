@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["_utils.scss"],"sourcesContent":[".container {\n    max-width: calc(var(--container-width + 2 * var(--container-padding-x)));\n    padding-inline: var(--container-padding-x);\n    margin-inline: auto;\n}\n\n.visually-hidden {\n    \n}"],"file":"_utils.css"}

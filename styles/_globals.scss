@@ -1,6 +1,6 @@
 body {
-    @include fluid-text();
-
+    // @include fluid-text();
+    font-size: 18px;
     color: var(--text-color);
 
     font-family: var(--font-family-base);
@@ -10,6 +10,8 @@ body {
 
     line-height: var(--line-height);
     
+    
+
 }
 
 button {
@@ -58,4 +60,9 @@ a {
   &:hover {
     opacity: 0.5;
   }
+}
+
+svg {
+  width: 100%;
+  height: auto;
 }
