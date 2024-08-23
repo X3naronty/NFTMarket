@@ -18,11 +18,16 @@
     flex-direction: row;
     height: 90px;
     justify-content: space-between;
+
+    @include mobile {
+      height: 80px;
+    }
   }
 
   &__list-burger-wrapper {
     display: flex;
     column-gap: 30px;
+
   }
 
   &__logo {
@@ -31,7 +36,7 @@
     }
 
     @include tablet-s {
-      width: 145px;
+      width: 115px;
     }
   }
 
@@ -76,7 +81,7 @@
         }
 
         @include tablet-s {
-          width: 24px;
+          width: 20px;
         }
       }
     }

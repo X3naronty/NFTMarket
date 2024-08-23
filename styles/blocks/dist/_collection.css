@@ -3,8 +3,13 @@
 }
 
 .collection__slider {
-  position: relative;
   margin-bottom: 67px;
+  position: relative;
+  margin-inline: 20px;
+}
+
+.collection__slider-main {
+  position: relative;
 }
 
 .collection__slider-list {
@@ -12,6 +17,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
+  column-gap: 20px;
 }
 
 .collection__slider-button {
@@ -26,8 +32,12 @@
   right: -20px;
 }
 
+.collection__slider-button .svg-wrapper {
+  width: 10px;
+}
+
 .collection__slider-button--inactive {
-  opacity: 50%;
+  opacity: 75%;
 }
 
 /*# sourceMappingURL=_collection.css.map */
