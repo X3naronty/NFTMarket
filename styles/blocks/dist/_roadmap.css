@@ -1,7 +1,13 @@
+.roadmap {
+  width: 100%;
+}
+
 .roadmap__list {
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   row-gap: 50px;
+  column-gap: 30px;
   justify-content: space-between;
   height: auto;
   list-style: none;

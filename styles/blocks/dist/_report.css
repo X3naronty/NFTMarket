@@ -1,10 +1,14 @@
+.report {
+  text-align: center;
+}
+
 .report__list {
   display: flex;
+  justify-content: center;
 }
 
 .report__item {
-  width: 307.5px;
-  padding-bottom: 30px;
+  width: 25%;
   text-align: center;
 }
 
@@ -13,7 +17,9 @@
 }
 
 .report__card {
-  padding-inline: 15px;
+  display: block;
+  width: 100%;
+  padding-inline: auto;
 }
 
 .report__title {

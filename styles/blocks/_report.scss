@@ -1,24 +1,62 @@
 .report {
+  text-align: center;
 
-    &__list {
-        display: flex;
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      align-content: center;
     }
 
-    &__item {
-        width: 307.5px;
-        padding-bottom: 30px;
-        text-align: center;
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
 
-        &:not(:first-child) .report__card {
-            border-left: 1px #fff solid;
+  &__item {
+    width: 25%;
+    text-align: center;
+
+    &:not(:first-child) {
+        border-left: 1px white solid;
+    }
+
+    @include mobile {
+      width: 100%;
+
+      &:not(:first-child), &:not(:nth-child(2)) {
+        padding-top: 30px;
+      }
+
+      &:nth-child(2n-1) {
+        border-left: none;
+      }
+    }
+
+    @include mobile-s {
+        &:nth-child(n){
+            border-left: 0;
         }
     }
 
-    &__card {
-        padding-inline: 15px;
-    }
+   
+  }
 
-    &__title {
-        margin-bottom: 22px;
+  &__card {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+
+    @include mobile {
+      margin-bottom: 18px;
     }
+  }
 }

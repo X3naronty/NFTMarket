@@ -1,34 +1,35 @@
 .section {
-    padding-block: var(--section-padding-y);
-    height: auto;
+  padding-block: var(--section-padding-y);
+  height: auto;
 
-    @include tablet {
-        padding-block: 70px;
+  
+  @include tablet {
+    padding-block: 70px;
+  }
+
+  @include mobile {
+    padding-block: 120px;
+
+    &_starting {
+      padding-top: 60px;
     }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
 
     @include mobile {
-        padding-block: 120px;
-
-        &_starting {
-            padding-top: 60px;
-        }
+      margin-bottom: 65px;
     }
+  }
 
-
-    &__title {
-        text-align: center;
-        margin-bottom: 80px;
-
-        @include mobile {
-            margin-bottom: 65px;
-        }
-    }
-
-    &_bg {
-        background: url('./../img/minting.png') center repeat;
-        box-shadow: inset 0px 0px 35px 24px rgba(15,5,29,0.79);
-        padding-inline: 0;
-        margin-top: 42px; 
-        border-bottom: 1px solid rgba(183, 180, 187, 0.25);
-    }
+  &_bg {
+    background: url('./../img/minting.png') center repeat;
+    // box-shadow: inset 0px 0px 35px 24px rgba(15,5,29,0.79);
+    box-shadow: inset 0px 0px 50px 50px #0F051D;
+    padding-inline: 0;
+    margin-top: 42px;
+    border-bottom: 1px solid rgba(183, 180, 187, 0.25);
+  }
 }

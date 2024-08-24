@@ -7,6 +7,10 @@
 
         list-style: none;
         counter-reset: counter-manual;
+        
+        @include mobile {
+            row-gap: 80px;
+        }
     }
 
     &__item {
@@ -19,7 +23,7 @@
             --manualNumber: "0" counter(counter-manual) ".";
         }
 
-        &:nth-child(2n + 1) {
+        &:nth-child(2n) {
             --flexDirection: row-reverse;
         }
     }
@@ -27,7 +31,33 @@
     &__card {
         display: flex;
         flex-direction: var(--flexDirection);
+        align-items: center;
         column-gap: 120px;
+        
+        @include tablet {
+            column-gap: 60px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+        &-body {
+            width: 50%;
+
+            @include mobile  {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &-image {
+            width: 50%;
+
+            @include mobile {
+                width: 350px;
+                margin-bottom: 40px;
+            }
+        }
 
         &-num p::before {
             content: var(--manualNumber);
@@ -44,18 +74,37 @@
         }
 
         &-title {
+            display: inline-block;
+            max-width: 8.5em;
             margin-bottom: 25px;
+
+            @include fluid-text(40, 56);
         }
 
         &-description {
             margin-bottom: 30px;
+            @include fluid-text(17, 19);
+
+
+            & p{
+                max-width: 60em;
+                display: inline-block;
+                @include mobile {
+                    max-width: 30em;
+                }
+            }
         }
 
         &-link {
             display: inline-block;
             padding-bottom: 5px;
-            border-bottom: rgba(131, 131, 131, 0.25) 1px solid;
+            border-bottom: rgba(131, 131, 131, 0.25) 2px solid;
             line-height: 1;
+            font-weight: 700;
+
+            &-icon {
+                width: 15px;
+            }
         }
     }
 

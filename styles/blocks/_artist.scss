@@ -13,6 +13,10 @@
     &__description {
         text-align: center;
         margin-bottom: 28px;
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
     }
 
     &__socials-list {

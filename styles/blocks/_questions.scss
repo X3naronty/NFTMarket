@@ -1,7 +1,7 @@
 .questions {
     
     &__list {
-        width: 688px;
+        max-width: 688px;
         padding: 50px;
         margin-inline: auto;
 
@@ -30,7 +30,7 @@
     &__accordeon {
         position: relative;
         --indicatorDisplay: none;
-
+        padding-right: 22px;
         &-indicator{
             &::after {
                 content: "";

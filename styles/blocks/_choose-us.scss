@@ -3,17 +3,42 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        height: 426px;
+        column-gap: 30px;
+        min-height: 426px;
+
+        @include desktop-s {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+
+        @include mobile-m {
+            grid-template-columns: auto;
+        }
     }
 
     &__item {
         &:nth-child(4n + 1), &:nth-child(4n) {
             height: 350px;
+
+            @include desktop-s {
+                height: 323px;
+            }
         }
         &:nth-child(2n) {
-            margin-top: auto;
+            margin-top: 48px;
+
+            @include desktop-s {
+                margin-top: 0;
+            }
         }
         height: 377px;
+
+        @include desktop-s {
+            height: 323px;
+        }
     }
 
     &__card {
@@ -22,17 +47,23 @@
         border-radius: 24px;
         padding: 48px 33px;
         height: 100%;
-        width: 277px;
+        max-width: 277px;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include desktop-s {
+            max-width: 360px;
+            justify-content: center;
+            row-gap: 30px;
+        }
 
         &-description {
             @include fluid-text(16, 17);
             line-height: 158%;
         }
 
-        
+       
     }
 }

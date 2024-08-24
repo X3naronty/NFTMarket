@@ -1,2 +1,2 @@
-.report__list{display:flex}.report__item{width:307.5px;padding-bottom:30px;text-align:center}.report__item:not(:first-child) .report__card{border-left:1px #fff solid}.report__card{padding-inline:15px}.report__title{margin-bottom:22px}
+.report,.report__item{text-align:center}.report__list{display:flex;justify-content:center}.report__item{width:25%}.report__item:not(:first-child) .report__card{border-left:1px #fff solid}.report__card{display:block;width:100%;padding-inline:auto}.report__title{margin-bottom:22px}
 /*# sourceMappingURL=_report.min.css.map */

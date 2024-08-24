@@ -6,12 +6,22 @@
     flex-direction: column;
     align-items: center;
 
+    text-align: center;
+
+    @include mobile {
+        padding: 40px 30px;
+    }
+
+    &__form {
+        width: 100%;
+    }
+
     &__title {
         margin-bottom: 18px;
     }
 
     &__description {
-        margin-bottom: 36px;
+        margin-bottom: 25px;
     }
 
     &__input {
@@ -20,13 +30,20 @@
         border-radius: var(--border-radius);
         border: none;
         padding: 14px 25px;
-        @include fluid-text(16, 17);
-        margin-right: 10px;
+        @include fluid-text(16, 18);
+        margin-top: 15px;
+        
+        @include mobile-s {
+            max-width: 300px;
+            width: 100%;
+        }
     }
 
     &__button {
         height: var(--button-height-narrow);
         padding: 0px 24px;
-        height: var(--input-height)
+        height: var(--input-height);
+        margin-left: 10px;
+        margin-top: 15px;
     }
 }

@@ -1,10 +1,11 @@
 .roadmap {
-
+    width: 100%;
     &__list {
+        width: 100%;
         display: grid;
         grid-template-columns: auto auto auto;
         row-gap: 50px;
-
+        column-gap: 30px;
         justify-content: space-between;
         //align-content: space-between;
 
@@ -12,6 +13,16 @@
         
         list-style: none;
         counter-reset: roadmap-counter;
+
+        @include tablet {
+            grid-template-columns: auto auto;
+            justify-content: center;
+            column-gap: 50px;
+        }
+
+        @include mobile {
+            grid-template-columns: auto;
+        }
     }
 
     &__item {

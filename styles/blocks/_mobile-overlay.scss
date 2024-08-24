@@ -4,9 +4,11 @@
     border-image-slice: 1;
 
     background-color: black;
-
+    position: fixed;
+    right: 0;
+    left: unset;
     height: 100%;
-    width: 100%;
+    max-width: 300px;
 
     &__header {
         padding: 30px 25px;
