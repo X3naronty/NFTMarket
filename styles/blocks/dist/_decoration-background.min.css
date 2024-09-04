@@ -1,2 +1,2 @@
-.decoration-background{width:100%;overflow-x:hidden;height:56.25vw;z-index:-1;position:absolute}.decoration-background__image{display:none;height:56.25vw;min-width:1920px}
+.decoration-background{display:var(--decoration-background-display);width:100%;overflow-x:hidden;height:56.25vw;z-index:-1;position:absolute}.decoration-background__image{height:56.25vw;min-width:1920px}
 /*# sourceMappingURL=_decoration-background.min.css.map */

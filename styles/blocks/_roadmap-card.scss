@@ -1,7 +1,7 @@
 .roadmap-card {
     max-width: 368px;
     height: 100%;
-    border: 1px solid rgba(253, 253, 253, 0.34);
+    border: 1px solid var(--border-color-gray);
     border-radius: 32px;
 
     display: flex;
@@ -37,7 +37,7 @@
             display: block;
             height: 1px;
             width: 80px;
-            border-top: 1px solid rgba(183, 180, 187, 0.25);
+            border-top: 1px solid var(--border-color-gray);
             margin-block: 35px;
         }
     }

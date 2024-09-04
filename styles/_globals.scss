@@ -9,17 +9,18 @@ body {
     background-color: var(--background-color);
 
     line-height: var(--line-height);
-    
-    
-
 }
 
 button {
   border: none;
 }
 
-p {
+p:where(:not([class])) {
   color: var(--text-color-alt);
+  
+  &:where(:not(:last-child):not([class])) {
+    margin-bottom: 15px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,7 +63,10 @@ a {
   }
 }
 
-svg {
-  width: 100%;
-  height: auto;
+g[data-vector-monochrome] *[fill]{
+  fill: currentColor;
+}
+
+g[data-vector-monochrome] *[stroke] {
+  stroke: currentColor;
 }

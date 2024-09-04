@@ -63,23 +63,10 @@
  
  /**
    Обнуляем вертикальные внешние отступы параграфа,
-   объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
   */
  p {
-   --paragraphMarginBottom: 15px;
- 
    margin-block: 0;
  }
- 
- /**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
- p:where(:not([class]):not(:last-child)) {
-   margin-bottom: var(--paragraphMarginBottom);
- }
- 
  
  /**
    Упрощаем работу с изображениями
@@ -95,7 +82,7 @@
  input,
  textarea,
  select,
- button, 
+ button 
  {
    font: inherit;
  }
@@ -107,8 +94,8 @@
     */
    height: 100%;
    max-width: 100%;
-   /**
-     Плавный скролл
+  /**
+     Плавный скролл при клике на якорные ссылки
     */
    scroll-behavior: smooth;
  }
@@ -137,8 +124,8 @@
  /**
    Приводим к единому цвету svg-элементы
   */
- svg *[fill] { fill: currentColor }
- svg *[stroke] { stroke: currentColor }
+ svg:not([data-svg-multicolor]) *[fill] { fill: currentColor }
+ svg:not([data-svg-multicolor]) *[stroke] { stroke: currentColor }
  
  /**
    Чиним баг задержки смены цвета при взаимодействии с svg-элементами

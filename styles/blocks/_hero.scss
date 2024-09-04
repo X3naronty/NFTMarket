@@ -96,22 +96,30 @@
       display: flex;
       column-gap: 30px;
       row-gap: 25px;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       max-width: 995px;
       margin-inline: auto;
+      
+      @include tablet-s {
+        justify-content: center;
+      }
     }
 
     &-item {
       // padding-inline: 15px;
-      &-wrapper {
-        display: flex;
-        column-gap: 20px;
-      }
+      
+    }
+
+    &-link {
+      display: block;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
 
     &-icon {
-
+        display: inline-block;
         @include mobile {
             width: 132px;
         }

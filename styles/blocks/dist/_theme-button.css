@@ -12,6 +12,10 @@
   top: 85vh;
 }
 
+.theme-button[aria-label='light'] {
+  background-color: #1b1128;
+}
+
 .theme-button:hover {
   background-color: #fff;
   color: black;

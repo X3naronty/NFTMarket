@@ -23,7 +23,7 @@
     text-align: center;
 
     &:not(:first-child) {
-        border-left: 1px white solid;
+        border-left: 1px var(--border-color-gray) solid;
     }
 
     @include mobile {

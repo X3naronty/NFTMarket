@@ -13,6 +13,10 @@
     right: 20px;
     top: 85vh;
 
+    &[aria-label='light'] {
+        background-color: #1b1128;
+    }
+
     &:hover {
         background-color: #fff;
         color: black;

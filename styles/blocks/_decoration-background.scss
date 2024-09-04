@@ -1,4 +1,5 @@
 .decoration-background {
+    display: var(--decoration-background-display);
     width: 100%;
     overflow-x: hidden;
     height: 56.25vw;
@@ -6,7 +7,6 @@
     position: absolute;
 
     &__image {
-        display: none;
         height: 56.25vw;
         min-width: 1920px;
     }

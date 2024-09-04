@@ -1,6 +1,6 @@
 .subscribe {
     padding: 60px 57px;
-    border: 1px solid rgba(243, 243, 243, 0.25);
+    border: 1px solid var(--border-color-gray);
     border-radius: 32px;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
 
     &__input {
         height: var(--input-height);
-        background: rgba(246, 242, 242, 0.19);
+        background: var(--input-color);
         border-radius: var(--border-radius);
         border: none;
         padding: 14px 25px;

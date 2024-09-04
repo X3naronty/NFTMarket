@@ -53,20 +53,9 @@ body,
 
 /**
    Обнуляем вертикальные внешние отступы параграфа,
-   объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
   */
 p {
-  --paragraphMarginBottom: 15px;
   margin-block: 0;
-}
-
-/**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
-p:where(:not([class]):not(:last-child)) {
-  margin-bottom: var(--paragraphMarginBottom);
 }
 
 /**
@@ -95,7 +84,7 @@ html {
   height: 100%;
   max-width: 100%;
   /**
-     Плавный скролл
+     Плавный скролл при клике на якорные ссылки
     */
   scroll-behavior: smooth;
 }
@@ -124,11 +113,11 @@ dialog {
 /**
    Приводим к единому цвету svg-элементы
   */
-svg *[fill] {
+svg:not([data-svg-multicolor]) *[fill] {
   fill: currentColor;
 }
 
-svg *[stroke] {
+svg:not([data-svg-multicolor]) *[stroke] {
   stroke: currentColor;
 }
 

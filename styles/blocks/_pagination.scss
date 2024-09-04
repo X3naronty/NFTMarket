@@ -11,7 +11,7 @@
         width: 10px;
         aspect-ratio: 1;
 
-        background-color: #fff;
+        background-color: var(--text-color);
         border-radius: 50%;
 
         &--inactive {
