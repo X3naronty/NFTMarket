@@ -4,14 +4,14 @@
   src: url("../fonts/Inter-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 /**
   Нормализация блочной модели
@@ -1353,9 +1353,23 @@ hr::after {
 .theme-button[aria-label=light] {
   background-color: #1b1128;
 }
-.theme-button:hover {
-  background-color: #fff;
-  color: black;
+@media (hover: hover) {
+  .theme-button:hover {
+    background-color: #fff;
+    color: black;
+  }
+  .theme-button:hover[aria-label=light] {
+    border: 3px solid var(--border-color-gray);
+  }
+}
+@media (hover: none) {
+  .theme-button:active {
+    background-color: #fff;
+    color: black;
+  }
+  .theme-button:active[aria-label=light] {
+    border: 3px solid var(--border-color-gray);
+  }
 }
 .theme-button:active {
   --text-color: black !important;

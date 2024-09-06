@@ -17,10 +17,15 @@
         background-color: #1b1128;
     }
 
-    &:hover {
+    @include hover {
         background-color: #fff;
         color: black;
+
+        &[aria-label='light']{
+            border: 3px solid var(--border-color-gray);
+        }
     }
+    
 
     &:active {
         --text-color: black !important;
