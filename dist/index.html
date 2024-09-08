@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
+    <link
       href="./fonts/Inter-Bold.woff2"
       type="font/woff2"
       rel="preload"
@@ -16,7 +16,7 @@
       rel="preload"
       as="font"
       crossorigin
-    /> -->
+    />
     <script src="./scripts/changeTheme.js"></script>
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>NFT Market</title>
@@ -190,11 +190,17 @@
               </a>
               <div class="hero__members">
                 <img
-                  src="./img/hero/members.png"
+                  src="./img/hero/members_medium.png"
                   alt=""
                   class="hero__members-icon"
                   width="104px"
                   height="53px"
+                  srcset="
+                    ./img/hero/members_small.png  110w,
+                    ./img/hero/members_medium.png 440w,
+                    ./img/hero/members.png 1006w
+                  "
+                  sizes="(max-width: 350px) 1006px, (max-width: 700px) 440px, (min-width: 701px) 110px"
                 />
                 <div class="members__body">
                   <h3 class="hero__members-title h4">47k+</h3>
