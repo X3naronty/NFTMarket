@@ -4,18 +4,27 @@
     &__list {
         display: inline-flex;
         margin-inline: auto;
-        column-gap: 22px;
+        column-gap: 25px;
     }
 
-    &__button {
-        width: 10px;
+    &__item {
+        width: 15px;
         aspect-ratio: 1;
 
-        background-color: var(--text-color);
+        background-color: var(--border-color-gray);
         border-radius: 50%;
 
-        &--inactive {
-            opacity: 50%;
+        @include hover {
+            background-color: var(--text-color);
+            cursor: pointer;
         }
+
+        &--active {
+            background-color: var(--text-color);
+        }
+    }
+    
+    &__button {
+        display: none;
     }
 }

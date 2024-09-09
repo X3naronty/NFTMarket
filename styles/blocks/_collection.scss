@@ -34,6 +34,9 @@
 
         &-item {
             // flex-shrink: 0;
+            &:nth-child(n+5) {
+                display: none;
+            }
             
             @include tablet {
                 &:nth-child(n+4) {

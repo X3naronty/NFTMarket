@@ -11,12 +11,12 @@
 .pagination__button {
   width: 10px;
   aspect-ratio: 1;
-  background-color: var(--text-color);
+  background-color: var(--border-color-gray);
   border-radius: 50%;
 }
 
-.pagination__button--inactive {
-  opacity: 50%;
+.pagination__button--active {
+  background-color: var(--text-color);
 }
 
 /*# sourceMappingURL=_pagination.css.map */
