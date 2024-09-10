@@ -2,7 +2,6 @@
   padding-block: var(--section-padding-y);
   height: auto;
 
-  
   @include tablet {
     padding-block: 70px;
   }
@@ -27,7 +26,8 @@
   &_background-box-shadow {
     background: url('./../img/minting.png') center repeat;
     // box-shadow: inset 0px 0px 35px 24px rgba(15,5,29,0.79);
-    box-shadow: inset 0px 0px 50px 50px var(--section-decoration-box-shadow-color);
+    box-shadow: inset 0px 0px 50px 50px
+      var(--section-decoration-box-shadow-color);
     padding-inline: 0;
     margin-top: 42px;
     border-bottom: 1px solid rgba(183, 180, 187, 0.25);

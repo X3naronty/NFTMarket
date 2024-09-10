@@ -621,53 +621,48 @@ hr::after {
 }
 .collection__slider {
   margin-bottom: 67px;
-  position: relative;
-  margin-inline: 20px;
+  display: block;
+  margin-inline: auto;
+  max-inline-size: 1200px;
+}
+@media (max-width: 1290px) {
+  .collection__slider {
+    max-inline-size: 888px;
+  }
 }
 @media (max-width: 1080px) {
   .collection__slider {
+    max-inline-size: 576px;
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 780px) {
+  .collection__slider {
+    max-inline-size: 264px;
   }
 }
 .collection__slider-main {
   position: relative;
 }
-@media (max-width: 1080px) {
-  .collection__slider-main {
-    display: inline-block;
-  }
-}
 .collection__slider-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 50px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+  position: relative;
 }
 @media (max-width: 1080px) {
   .collection__slider-list {
-    justify-content: center;
     margin-bottom: 44px;
   }
 }
-.collection__slider-item:nth-child(n+5) {
-  display: none;
+.collection__slider-list-overflow-x-wrapper {
+  overflow-x: hidden;
 }
-@media (max-width: 1080px) {
-  .collection__slider-item:nth-child(n+4) {
-    display: none;
-  }
-}
-@media (max-width: 780px) {
-  .collection__slider-item:nth-child(n+3) {
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-  .collection__slider-item:nth-child(n+2) {
-    display: none;
-  }
+.collection__slider-item {
+  flex-shrink: 0;
+  max-width: 264px;
 }
 .collection__slider-button {
   width: 40px;
@@ -678,11 +673,11 @@ hr::after {
   vertical-align: baseline;
   position: absolute;
   top: 40%;
-  right: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgba(131, 131, 131, 0.25);
+  z-index: 50;
+  border: 3px solid rgb(131, 131, 131);
 }
 .collection__slider-button-icon {
   width: 10px !important;
@@ -691,7 +686,13 @@ hr::after {
   width: 10px;
 }
 .collection__slider-button--inactive {
-  opacity: 75%;
+  opacity: 50%;
+}
+.collection__slider-button--left {
+  left: -20px;
+}
+.collection__slider-button--right {
+  right: -20px;
 }
 
 .collection-card__image {
