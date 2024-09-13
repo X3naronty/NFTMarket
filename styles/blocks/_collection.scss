@@ -7,17 +7,25 @@
     margin-inline: auto;
     max-inline-size: 1200px;
 
+    --itemsVisible: 4;
+
     @media (max-width: 1290px) {
       max-inline-size: 888px;
+      --itemsVisible: 3;
+
     }
 
     @include tablet {
       max-inline-size: 576px;
       margin-bottom: 40px;
+      --itemsVisible: 2;
+
     }
 
     @include mobile {
       max-inline-size: 264px;
+      --itemsVisible: 1;
+
     }
 
     &-main {
@@ -44,6 +52,8 @@
     &-item {
       flex-shrink: 0;
       max-width: 264px;
+      
+      
     }
 
     &-button {

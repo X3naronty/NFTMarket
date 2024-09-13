@@ -619,26 +619,7 @@
             </div>
 
             <div class="pagination">
-              <ul class="pagination__list">
-                <li
-                  class="pagination__item pagination__item--active"
-                  data-count="0"
-                >
-                  <button class="pagination__button"></button>
-                </li>
-                <li class="pagination__item" data-count="1">
-                  <button class="pagination__button"></button>
-                </li>
-                <li class="pagination__item" data-count="2">
-                  <button class="pagination__button"></button>
-                </li>
-                <li class="pagination__item" data-count="3">
-                  <button class="pagination__button"></button>
-                </li>
-                <li class="pagination__item" data-count="4">
-                  <button class="pagination__button"></button>
-                </li>
-              </ul>
+              <ul class="pagination__list"></ul>
             </div>
           </div>
 
@@ -1781,7 +1762,8 @@
       };
 
       // Slider
-      const slider = document.querySelector('.collection__slider-list');
+      const slider = document.querySelector('.collection__slider');
+      const sliderList = document.querySelector('.collection__slider-list');
       const sliderSwitchLeftButton = document.querySelector(
         '.collection__slider-button--left'
       );
@@ -1789,27 +1771,46 @@
         '.collection__slider-button--right'
       );
 
+      // Slider: pagination
       const sliderPagination = document.querySelector('.pagination__list');
+      const sliderPaginationItemHTML = `<button class="pagination__button"></button>`;
+      
+      function changePagination() {
+        let paginationCount = sliderList.children.length - getComputedStyle(slider).getPropertyValue('--itemsVisible') + 1;
+        for(let i = 0; i < paginationCount; i++) {
+          let sliderPaginationItem = document.createElement('li');
+          sliderPaginationItem.innerHTML = sliderPaginationItemHTML;
+          sliderPaginationItem.className = 'pagination__item';
+          sliderPaginationItem.dataset.count = i;
+          if(i === 0) {
+            sliderPaginationItem.classList.add('pagination__item--active');
+          }
+
+          sliderPagination.append(sliderPaginationItem);
+        }
+      }
+      changePagination();
+
       let sliderActivePagination = 0;
       const sliderOffset = 312;
 
       function sliderShift(sliderOffsetCount) {
         let left =
-          Number.parseInt(getComputedStyle(slider).left) +
+          Number.parseInt(getComputedStyle(sliderList).left) +
           sliderOffsetCount * sliderOffset +
           'px';
-        console.log(left);
-        slider.style.left = left;
+        // console.log(left);
+        sliderList.style.left = left;
       }
 
       function paginationToggle(number = 1) {
-        if (number === -1) {
-          number = 4;
-        }
-        if (number === 5) {
-          number = 0;
-        }
-        console.log(sliderActivePagination);
+        // if (number === -1) {
+        //   number = 4;
+        // }
+        // if (number === 5) {
+        //   number = 0;
+        // }
+        // console.log(sliderActivePagination);
         sliderPagination.children[sliderActivePagination].classList.remove(
           'pagination__item--active'
         );
@@ -1828,7 +1829,7 @@
             'collection__slider-button--inactive'
           );
           sliderSwitchRightButton.removeAttribute('disabled');
-        } else if (number === 4) {
+        } else if (number === sliderPagination.children.length - 1) {
           sliderSwitchRightButton.classList.add(
             'collection__slider-button--inactive'
           );

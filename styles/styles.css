@@ -624,21 +624,25 @@ hr::after {
   display: block;
   margin-inline: auto;
   max-inline-size: 1200px;
+  --itemsVisible: 4;
 }
 @media (max-width: 1290px) {
   .collection__slider {
     max-inline-size: 888px;
+    --itemsVisible: 3;
   }
 }
 @media (max-width: 1080px) {
   .collection__slider {
     max-inline-size: 576px;
     margin-bottom: 40px;
+    --itemsVisible: 2;
   }
 }
 @media (max-width: 780px) {
   .collection__slider {
     max-inline-size: 264px;
+    --itemsVisible: 1;
   }
 }
 .collection__slider-main {
