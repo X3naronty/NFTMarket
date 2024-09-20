@@ -184,7 +184,7 @@ svg * {
   --text-color-alt: #b7b4bb;
   --border-color-gray: rgba(255, 255, 255, 0.25);
   --report-separation-border: 1px white solid;
-  --input-color: rgba(246, 242, 242, 0.19);
+  --input-color: rgba(246, 242, 242, 0.46);
   --background-color: #0f051d;
   --decoration-background-display: none;
   --icon-invert-filter: none;
@@ -271,6 +271,10 @@ svg * {
   }
 }
 
+html {
+  background-color: white;
+}
+
 body {
   font-size: 18px;
   color: var(--text-color);
@@ -291,28 +295,38 @@ p:where(:not([class])):where(:not(:last-child):not([class])) {
   margin-bottom: 15px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   line-height: var(--line-height-small);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: clamp(42px, 3.75vw, 72px);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: clamp(42px, 3.3333333333vw, 64px);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: clamp(28px, 2.9166666667vw, 56px);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: clamp(26px, 1.4583333333vw, 28px);
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: clamp(22px, 1.25vw, 24px);
 }
 
@@ -408,23 +422,23 @@ g[data-vector-monochrome] *[stroke] {
   align-items: center;
   height: 100%;
 }
-.header__menu-link .svg-wrapper {
+.header__menu-item {
+  font-weight: bold;
+  height: 100%;
+}
+.header__menu-icon {
   display: flex;
   width: 24px;
 }
 @media (max-width: 1080px) {
-  .header__menu-link .svg-wrapper {
+  .header__menu-icon {
     width: 22px;
   }
 }
 @media (max-width: 920px) {
-  .header__menu-link .svg-wrapper {
+  .header__menu-icon {
     width: 20px;
   }
-}
-.header__menu-item {
-  font-weight: bold;
-  height: 100%;
 }
 
 .logo {
@@ -723,26 +737,29 @@ hr::after {
 .pagination__item {
   width: 15px;
   aspect-ratio: 1;
-  background-color: var(--border-color-gray);
+  display: flex;
+}
+.pagination__button {
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 50%;
+  background-color: var(--border-color-gray);
+  padding: 0;
 }
 @media (hover: hover) {
-  .pagination__item:hover {
+  .pagination__button:hover {
     background-color: var(--text-color);
     cursor: pointer;
   }
 }
 @media (hover: none) {
-  .pagination__item:active {
+  .pagination__button:active {
     background-color: var(--text-color);
     cursor: pointer;
   }
 }
-.pagination__item--active {
+.pagination__button--active {
   background-color: var(--text-color);
-}
-.pagination__button {
-  display: none;
 }
 
 .choose-us__list {
@@ -1008,6 +1025,12 @@ hr::after {
     max-width: 300px;
     width: 100%;
   }
+}
+.subscribe__input::-moz-placeholder {
+  color: var(--text-color);
+}
+.subscribe__input::placeholder {
+  color: var(--text-color);
 }
 .subscribe__button {
   height: var(--button-height-narrow);

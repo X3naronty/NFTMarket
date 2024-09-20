@@ -72,7 +72,15 @@
       align-items: center;
       height: 100%;
 
-      & .svg-wrapper {
+      
+    }
+
+    &-item {
+      font-weight: bold;
+      height: 100%;
+    }
+    
+    &-icon {
         display: flex;
         width: 24px;
 
@@ -83,12 +91,7 @@
         @include tablet-s {
           width: 20px;
         }
-      }
-    }
-
-    &-item {
-      font-weight: bold;
-      height: 100%;
+      
     }
   }
 }

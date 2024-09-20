@@ -1,15 +1,18 @@
+html {
+  background-color: white;
+}
+
 body {
-    // @include fluid-text();
-    font-size: 18px;
-    color: var(--text-color);
+  // @include fluid-text();
+  font-size: 18px;
+  color: var(--text-color);
 
-    font-family: var(--font-family-base);
-    font-weight: normal;
+  font-family: var(--font-family-base);
+  font-weight: normal;
 
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 
-    line-height: var(--line-height);
-    
+  line-height: var(--line-height);
 }
 
 button {
@@ -18,32 +21,42 @@ button {
 
 p:where(:not([class])) {
   color: var(--text-color-alt);
-  
+
   &:where(:not(:last-child):not([class])) {
     margin-bottom: 15px;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    line-height: var(--line-height-small);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: var(--line-height-small);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   @include fluid-text(42, 72);
 }
-h2, .h2 {
+h2,
+.h2 {
   @include fluid-text(42, 64);
 }
-h3, .h3 {
+h3,
+.h3 {
   @include fluid-text(28, 56);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   @include fluid-text(26, 28);
 }
 
-h5, .h5 {
+h5,
+.h5 {
   @include fluid-text(22, 24);
 }
 
@@ -52,7 +65,7 @@ button,
 input,
 textarea,
 svg {
-  transition-duration: var(--transition-duration); 
+  transition-duration: var(--transition-duration);
 }
 
 a {
@@ -64,7 +77,7 @@ a {
   }
 }
 
-g[data-vector-monochrome] *[fill]{
+g[data-vector-monochrome] *[fill] {
   fill: currentColor;
 }
 

@@ -10,9 +10,17 @@
     &__item {
         width: 15px;
         aspect-ratio: 1;
+        display: flex;
 
-        background-color: var(--border-color-gray);
+        
+    }
+    
+    &__button {
+        width: 100%;
+        aspect-ratio: 1;
         border-radius: 50%;
+        background-color: var(--border-color-gray);
+        padding: 0;
 
         @include hover {
             background-color: var(--text-color);
@@ -22,9 +30,5 @@
         &--active {
             background-color: var(--text-color);
         }
-    }
-    
-    &__button {
-        display: none;
     }
 }

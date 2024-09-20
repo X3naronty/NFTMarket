@@ -1,2 +1,2 @@
-.pagination{text-align:center}.pagination__list{display:inline-flex;margin-inline:auto;column-gap:22px}.pagination__button{width:10px;aspect-ratio:1;background-color:var(--border-color-gray);border-radius:50%}.pagination__button--active{background-color:var(--text-color)}
+.pagination{text-align:center}.pagination__list{display:inline-flex;margin-inline:auto;column-gap:25px}.pagination__item{width:15px;aspect-ratio:1;display:flex}.pagination__button{width:100%;aspect-ratio:1;border-radius:50%;background-color:var(--border-color-gray)}
 /*# sourceMappingURL=_pagination.min.css.map */

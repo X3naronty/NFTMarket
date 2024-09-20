@@ -5,18 +5,20 @@
 .pagination__list {
   display: inline-flex;
   margin-inline: auto;
-  column-gap: 22px;
+  column-gap: 25px;
+}
+
+.pagination__item {
+  width: 15px;
+  aspect-ratio: 1;
+  display: flex;
 }
 
 .pagination__button {
-  width: 10px;
+  width: 100%;
   aspect-ratio: 1;
-  background-color: var(--border-color-gray);
   border-radius: 50%;
-}
-
-.pagination__button--active {
-  background-color: var(--text-color);
+  background-color: var(--border-color-gray);
 }
 
 /*# sourceMappingURL=_pagination.css.map */

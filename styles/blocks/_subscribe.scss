@@ -37,6 +37,10 @@
             max-width: 300px;
             width: 100%;
         }
+        
+        &::placeholder {
+            color: var(--text-color);
+        }
     }
 
     &__button {
